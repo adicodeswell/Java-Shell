@@ -1,5 +1,5 @@
 param (
-    [string]$RepoUrl = "https://github.com/Adi-Codes-well/Java-Shell.git"
+    [string]$RepoUrl = "https://github.com/adicodeswell/Java-Shell.git"
 )
 
 Write-Host "Starting automated My-Shell-beta installation..." -ForegroundColor Cyan
