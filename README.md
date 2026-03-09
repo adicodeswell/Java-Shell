@@ -28,6 +28,31 @@ To build and run this project, you need the following tools installed on your sy
 * **Java Development Kit (JDK) 25 or higher:** The project is configured to use the Java 25 language level and preview features.
 * **Apache Maven:** Used to manage dependencies and build the executable JAR file.
 
+### Installing Maven
+
+If you don't already have Maven installed, follow the instructions for your OS:
+
+#### Linux (Debian/Ubuntu)
+```bash
+sudo apt update
+sudo apt install maven
+```
+
+#### macOS (Homebrew)
+```bash
+brew install maven
+```
+
+#### Windows (Chocolatey or Scoop)
+Using [Chocolatey](https://chocolatey.org/):
+```cmd
+choco install maven
+```
+Or using [Scoop](https://scoop.sh/):
+```cmd
+scoop install maven
+```
+
 ***
 
 ## 🚀 Getting Started
