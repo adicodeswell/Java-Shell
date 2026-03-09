@@ -104,6 +104,15 @@ We've provided easy scripts to build and install the shell directly into your sy
    ```
 3. Run the installer:
    ```bash
+   ./install.sh
+   ```
+   *This copies the jar to `~/.local/lib/mini-shell/` and adds a wrapper script to `~/.local/bin/`.*
+4. Ensure `~/.local/bin` is in your `PATH`.
+5. Run your new shell from anywhere:
+   ```bash
+   mini-shell
+   ```
+
 ### Windows
 
 #### Automated One-Liner Installation (Recommended & Easiest)
