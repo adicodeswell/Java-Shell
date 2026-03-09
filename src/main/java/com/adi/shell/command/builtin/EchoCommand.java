@@ -78,7 +78,8 @@ public class EchoCommand implements Command {
             File parent = target.getParentFile();
 
             if (parent != null && !parent.exists()) {
-                try (FileWriter fw = new FileWriter("/dev/null", true)) {
+                String nullDevice = System.getProperty("os.name").toLowerCase().contains("win") ? "NUL" : "/dev/null";
+                try (FileWriter fw = new FileWriter(nullDevice, true)) {
                     fw.write(echoOut.toString());
                 } catch (IOException ignored) {}
             } else {

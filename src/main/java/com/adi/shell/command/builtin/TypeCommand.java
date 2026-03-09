@@ -23,7 +23,7 @@ public class TypeCommand implements Command {
         }
         String path = System.getenv("PATH");
         if (path == null) path = "";
-        String[] dirs = path.split(":");
+        String[] dirs = path.split(File.pathSeparator);
 
         for (String dir : dirs) {
             if (dir.isEmpty()) continue;
@@ -47,7 +47,7 @@ public class TypeCommand implements Command {
             String path = System.getenv("PATH");
             if (path == null) path = "";
             boolean found = false;
-            for (String dir : path.split(":")) {
+            for (String dir : path.split(File.pathSeparator)) {
                 File file = new File(dir, arg);
                 if (file.exists() && file.canExecute()) {
                     writer.println(arg + " is " + file.getAbsolutePath());

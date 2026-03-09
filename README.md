@@ -63,3 +63,41 @@ $ cat Main.java | grep "import"
 import java.util.*;
 import java.io.*;
 ```
+
+***
+
+## 📦 Installation Guide
+
+We've provided easy scripts to build and install the shell directly into your system's PATH, so you can run it from anywhere just like a normal shell!
+
+### Linux / macOS
+
+1. Make sure you have `bash` and `maven` installed.
+2. Make the install script executable:
+   ```bash
+   chmod +x install.sh
+   ```
+3. Run the installer:
+   ```bash
+   ./install.sh
+   ```
+   *This copies the jar to `~/.local/lib/mini-shell/` and adds a wrapper script to `~/.local/bin/`.*
+4. Ensure `~/.local/bin` is in your `PATH`.
+5. Run your new shell from anywhere:
+   ```bash
+   mini-shell
+   ```
+
+### Windows
+
+1. Make sure you have `maven` installed and added to your `PATH`.
+2. Run the provided batch file from the command prompt or by double-clicking it:
+   ```cmd
+   install.bat
+   ```
+   *This will package the `.jar` and create a wrapper script in `%LOCALAPPDATA%\mini-shell\bin`.*
+3. The script automatically updates your user `PATH`. You may need to **restart your terminal** or PC for the changes to take effect.
+4. Run your new shell from anywhere:
+   ```cmd
+   mini-shell
+   ```

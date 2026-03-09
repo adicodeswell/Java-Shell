@@ -15,7 +15,7 @@ public class ExternalCommandExecutor {
         String cmd = commands[0];
         String path = System.getenv("PATH");
         if (path == null) path = "";
-        String[] dirs = path.split(":");
+        String[] dirs = path.split(File.pathSeparator);
 
         boolean redirectOut = false;
         boolean appendOut = false;
@@ -112,7 +112,8 @@ public class ExternalCommandExecutor {
         if (redirectOut && outTarget != null) {
             File parent = outTarget.getParentFile();
             if (parent != null && !parent.exists()) {
-                pb.redirectOutput(ProcessBuilder.Redirect.to(new File("/dev/null")));
+                String nullDevice = System.getProperty("os.name").toLowerCase().contains("win") ? "NUL" : "/dev/null";
+                pb.redirectOutput(ProcessBuilder.Redirect.to(new File(nullDevice)));
             } else {
                 if (appendOut) {
                     pb.redirectOutput(ProcessBuilder.Redirect.appendTo(outTarget));
@@ -129,7 +130,8 @@ public class ExternalCommandExecutor {
         if (redirectErr && errTarget != null) {
             File parent = errTarget.getParentFile();
             if (parent != null && !parent.exists()) {
-                pb.redirectError(ProcessBuilder.Redirect.to(new File("/dev/null")));
+                String nullDevice = System.getProperty("os.name").toLowerCase().contains("win") ? "NUL" : "/dev/null";
+                pb.redirectError(ProcessBuilder.Redirect.to(new File(nullDevice)));
             } else {
                 try {
                     if (appendErr && !errTarget.exists()) {
