@@ -1,5 +1,5 @@
 param (
-    [string]$RepoUrl = "https://github.com/Adi-Codes-well/My-Shell-beta.git"
+    [string]$RepoUrl = "https://github.com/Adi-Codes-well/Java-Shell.git"
 )
 
 Write-Host "Starting automated My-Shell-beta installation..." -ForegroundColor Cyan
@@ -56,7 +56,7 @@ if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
     Write-Host "Git is already installed." -ForegroundColor Green
 }
 
-$InstallDir = "$env:USERPROFILE\My-Shell-beta"
+$InstallDir = "$env:USERPROFILE\Java-Shell"
 
 if (-not (Test-Path -Path $InstallDir)) {
     Write-Host "Cloning repository..." -ForegroundColor Yellow

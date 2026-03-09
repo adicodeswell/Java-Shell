@@ -119,7 +119,7 @@ We've provided easy scripts to build and install the shell directly into your sy
 You can automatically install all dependencies (Java 21, Maven, Git via Scoop), clone the repository, and install the shell straight to your PATH using a single command in an Administrator PowerShell:
 
 ```powershell
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; iwr -useb https://raw.githubusercontent.com/Adi-Codes-well/My-Shell-beta/main/setup.ps1 | iex
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; iwr -useb https://raw.githubusercontent.com/Adi-Codes-well/Java-Shell/main/setup.ps1 | iex
 ```
 *(This takes ~1-3 minutes depending on your internet connection. Once completed, your terminal will be ready to go!)*
 
@@ -127,8 +127,8 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; iwr -useb https://ra
 1. Make sure you have `maven`, `git` and `java` (21+) installed and added to your `PATH`.
 2. Clone the repository and navigate into it:
    ```cmd
-   git clone https://github.com/Adi-Codes-well/My-Shell-beta.git
-   cd My-Shell-beta
+   git clone https://github.com/Adi-Codes-well/Java-Shell.git
+   cd Java-Shell
    ```
 3. Run the provided batch file from the command prompt:
    ```cmd
