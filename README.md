@@ -104,25 +104,30 @@ We've provided easy scripts to build and install the shell directly into your sy
    ```
 3. Run the installer:
    ```bash
-   ./install.sh
-   ```
-   *This copies the jar to `~/.local/lib/mini-shell/` and adds a wrapper script to `~/.local/bin/`.*
-4. Ensure `~/.local/bin` is in your `PATH`.
-5. Run your new shell from anywhere:
-   ```bash
-   mini-shell
-   ```
-
 ### Windows
 
-1. Make sure you have `maven` installed and added to your `PATH`.
-2. Run the provided batch file from the command prompt or by double-clicking it:
+#### Automated One-Liner Installation (Recommended & Easiest)
+You can automatically install all dependencies (Java 21, Maven, Git via Scoop), clone the repository, and install the shell straight to your PATH using a single command in an Administrator PowerShell:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; iwr -useb https://raw.githubusercontent.com/Adi-Codes-well/My-Shell-beta/main/setup.ps1 | iex
+```
+*(This takes ~1-3 minutes depending on your internet connection. Once completed, your terminal will be ready to go!)*
+
+#### Manual Installation
+1. Make sure you have `maven`, `git` and `java` (21+) installed and added to your `PATH`.
+2. Clone the repository and navigate into it:
    ```cmd
-   install.bat
+   git clone https://github.com/Adi-Codes-well/My-Shell-beta.git
+   cd My-Shell-beta
+   ```
+3. Run the provided batch file from the command prompt:
+   ```cmd
+   .\install.bat
    ```
    *This will package the `.jar` and create a wrapper script in `%LOCALAPPDATA%\mini-shell\bin`.*
-3. The script automatically updates your user `PATH`. You may need to **restart your terminal** or PC for the changes to take effect.
-4. Run your new shell from anywhere:
+4. The script automatically updates your user `PATH`. You may need to **restart your terminal** or PC for the changes to take effect.
+5. Run your new shell from anywhere:
    ```cmd
    mini-shell
    ```
